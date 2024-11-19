@@ -9,7 +9,7 @@
 #
 Name     : xscorch
 Version  : 0.2.1
-Release  : 1
+Release  : 2
 URL      : http://www.xscorch.org/releases/xscorch-0.2.1.tar.gz
 Source0  : http://www.xscorch.org/releases/xscorch-0.2.1.tar.gz
 Source1  : http://www.xscorch.org/releases/xscorch-0.2.1.tar.gz.asc
@@ -54,6 +54,14 @@ Group: Data
 data components for the xscorch package.
 
 
+%package extras
+Summary: extras components for the xscorch package.
+Group: Default
+
+%description extras
+extras components for the xscorch package.
+
+
 %package license
 Summary: license components for the xscorch package.
 Group: Default
@@ -86,7 +94,7 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1732037774
+export SOURCE_DATE_EPOCH=1732037963
 export GCC_IGNORE_WERROR=1
 export AR=gcc-ar
 export RANLIB=gcc-ranlib
@@ -127,7 +135,7 @@ FFLAGS="$CLEAR_INTERMEDIATE_FFLAGS"
 FCFLAGS="$CLEAR_INTERMEDIATE_FCFLAGS"
 ASFLAGS="$CLEAR_INTERMEDIATE_ASFLAGS"
 LDFLAGS="$CLEAR_INTERMEDIATE_LDFLAGS"
-export SOURCE_DATE_EPOCH=1732037774
+export SOURCE_DATE_EPOCH=1732037963
 rm -rf %{buildroot}
 mkdir -p %{buildroot}/usr/share/package-licenses/xscorch
 cp %{_builddir}/xscorch-%{version}/COPYING %{buildroot}/usr/share/package-licenses/xscorch/b47456e2c1f38c40346ff00db976a2badf36b5e3 || :
@@ -145,7 +153,6 @@ install -p -m 644 img/xscorch-logo.xpm %{buildroot}/usr/share/xscorch/images/
 %files bin
 %defattr(-,root,root,-)
 /usr/bin/xscorch
-/usr/bin/xscorch-server
 
 %files data
 %defattr(-,root,root,-)
@@ -158,6 +165,10 @@ install -p -m 644 img/xscorch-logo.xpm %{buildroot}/usr/share/xscorch/images/
 /usr/share/xscorch/sounds/README
 /usr/share/xscorch/weapons.def
 /usr/share/xscorch/xscorch.txt
+
+%files extras
+%defattr(-,root,root,-)
+/usr/bin/xscorch-server
 
 %files license
 %defattr(0644,root,root,0755)
