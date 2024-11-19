@@ -1,0 +1,2 @@
+mkdir -p %{buildroot}/usr/share/xscorch/images
+install -p -m 644 img/xscorch-logo.xpm %{buildroot}/usr/share/xscorch/images/

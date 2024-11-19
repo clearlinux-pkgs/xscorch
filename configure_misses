@@ -1,0 +1,7 @@
+Configure miss: --enable-debug flag
+Configure miss: --enable-opt flag
+Configure miss: --enable-warn flag
+Configure miss: --enable-warn-error flag
+Configure miss: convolution in -lreality
+Configure miss: libmikmod - version >= 3.1.5
+Configure miss: libmikmod-config
