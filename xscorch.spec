@@ -9,7 +9,7 @@
 #
 Name     : xscorch
 Version  : 0.2.1
-Release  : 2
+Release  : 3
 URL      : http://www.xscorch.org/releases/xscorch-0.2.1.tar.gz
 Source0  : http://www.xscorch.org/releases/xscorch-0.2.1.tar.gz
 Source1  : http://www.xscorch.org/releases/xscorch-0.2.1.tar.gz.asc
@@ -24,6 +24,7 @@ Requires: xscorch-man = %{version}-%{release}
 BuildRequires : buildreq-configure
 BuildRequires : gnupg
 BuildRequires : pkgconfig(gtk+-2.0)
+BuildRequires : pkgconfig(libmikmod)
 BuildRequires : readline-dev
 # Suppress stripping binaries
 %define __strip /bin/true
@@ -94,7 +95,7 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1732037963
+export SOURCE_DATE_EPOCH=1732038447
 export GCC_IGNORE_WERROR=1
 export AR=gcc-ar
 export RANLIB=gcc-ranlib
@@ -135,7 +136,7 @@ FFLAGS="$CLEAR_INTERMEDIATE_FFLAGS"
 FCFLAGS="$CLEAR_INTERMEDIATE_FCFLAGS"
 ASFLAGS="$CLEAR_INTERMEDIATE_ASFLAGS"
 LDFLAGS="$CLEAR_INTERMEDIATE_LDFLAGS"
-export SOURCE_DATE_EPOCH=1732037963
+export SOURCE_DATE_EPOCH=1732038447
 rm -rf %{buildroot}
 mkdir -p %{buildroot}/usr/share/package-licenses/xscorch
 cp %{_builddir}/xscorch-%{version}/COPYING %{buildroot}/usr/share/package-licenses/xscorch/b47456e2c1f38c40346ff00db976a2badf36b5e3 || :
